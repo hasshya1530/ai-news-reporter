@@ -1,0 +1,22 @@
+[project]
+name = "news-reporter-agent"
+version = "0.1.0"
+description = "A multi-agent AI news reporter built with CrewAI and Google Gemma."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "crewai",
+    "streamlit",
+    "google-genai",
+    "python-dotenv",
+    "requests",
+]
+
+[tool.uv]
+override-dependencies = [
+    "lancedb<0.29",
+]
+
+required-environments = [
+    "sys_platform == 'darwin' and platform_machine == 'x86_64'",
+]
